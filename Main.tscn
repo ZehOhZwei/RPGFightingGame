@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://21hkub4y3i1t"]
+
+[ext_resource type="Texture2D" uid="uid://chedj2gl74jtc" path="res://simple_platformer.png" id="1_g8b3l"]
+[ext_resource type="PackedScene" uid="uid://cymhj3hpogqr8" path="res://Player.tscn" id="2_mg5ki"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_in8q1"]
+texture = ExtResource("1_g8b3l")
+0:0/size_in_atlas = Vector2i(4, 4)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/size_in_atlas = Vector2i(4, 4)
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+8:0/size_in_atlas = Vector2i(4, 4)
+8:0/0 = 0
+8:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:0/0/physics_layer_0/angular_velocity = 0.0
+8:11/size_in_atlas = Vector2i(4, 4)
+8:11/0 = 0
+8:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+8:11/0/physics_layer_0/angular_velocity = 0.0
+4:11/size_in_atlas = Vector2i(4, 4)
+4:11/0 = 0
+4:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:11/0/physics_layer_0/angular_velocity = 0.0
+4:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-33, -18.5, 31.5, -19.5, 32, 32.5, -32.5, 32)
+0:11/size_in_atlas = Vector2i(4, 4)
+0:11/0 = 0
+0:11/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:11/0/physics_layer_0/angular_velocity = 0.0
+0:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -21.5, 32.1734, -21.2132, 31.8198, 31.8198, -33, 32)
+
+[sub_resource type="TileSet" id="TileSet_w48em"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_in8q1")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_w48em")
+cell_quadrant_size = 19
+format = 2
+layer_0/tile_data = PackedInt32Array(2490368, 262144, 11, 2490372, 262144, 11, 2490376, 262144, 11, 2490392, 262144, 11, 2490396, 262144, 11, 2490400, 262144, 11, 2490404, 262144, 11, 2490408, 262144, 11, 2490412, 262144, 11, 2490416, 262144, 11, 2490420, 262144, 11, 2490424, 262144, 11, 2490428, 262144, 11, 2490432, 262144, 11, 2490436, 262144, 11, 2490440, 262144, 11, 2293831, 0, 11, 2293827, 0, 11, 2293823, 0, 11, 2293819, 0, 11, 2293815, 0, 11, 2293811, 0, 11, 2293807, 0, 11, 2293803, 0, 11, 2293799, 0, 11, 2293795, 0, 11, 2293791, 0, 11, 2293787, 0, 11, 2293783, 0, 11, 2293771, 0, 11, 2293767, 262144, 11, 2293763, 262144, 11, 2359295, 262144, 11, 2490380, 262144, 11, 2293775, 0, 11, 2490384, 262144, 11, 2293779, 0, 11, 2490388, 262144, 11, 2097153, 262144, 11, 1900545, 262144, 11, 2097159, 262144, 11, 2097155, 262144, 11, 1900549, 262144, 11, 1703937, 0, 11)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_mg5ki")]
+position = Vector2(552, 57)
